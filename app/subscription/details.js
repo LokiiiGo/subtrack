@@ -212,13 +212,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#1F2937',
     alignItems: 'center'
   },
-  headerTitle: { fontSize: 18, fontWeight: '600', color: '#fff' },
-  headerEdit: { padding: 4 },
-  backButton: { padding: 4 },
+  headerTitle: { 
+    fontSize: 18, 
+    fontWeight: '600', 
+    color: '#fff',
+    marginTop: 20
+  },
+
+  headerEdit: { 
+    padding: 4,
+    marginTop: 20
+  },
+
+  backButton: { padding: 4, marginTop: 20 },
   content: { padding: 16 },
   iconSection: { alignItems: 'center', marginBottom: 20 },
   name: { fontSize: 24, fontWeight: 'bold', color: '#fff', marginTop: 8 },
   status: { fontSize: 14, color: '#9CA3AF', marginTop: 4 },
+  
   card: {
     backgroundColor: '#1F2937',
     padding: 16,

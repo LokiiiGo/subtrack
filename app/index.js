@@ -32,9 +32,9 @@ export default function HomeScreen() {
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: darkMode ? '#1f2937' : '#eeeeef' }}>
+    <View style={{ flex: 1, backgroundColor: darkMode ? '#1f2937' : '#ffffffff' }}>
       {/* Botão de tema */}
-      <View style={{ alignItems: 'flex-end', padding: 16 }}>
+      <View style={{ alignItems: 'flex-end', padding: 16, marginTop: 40 }}>
         <ThemeToggle onToggle={setDarkMode} />
       </View>
 

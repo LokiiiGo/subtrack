@@ -1,8 +1,7 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Alert, Linking } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useSubscriptions } from '../context/SubscriptionContext';
+import { Alert, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { getSubscriptionIcon } from '../constants/icons';
+import { useSubscriptions } from '../context/SubscriptionContext';
 
 const SubscriptionDetailsScreen = ({ route, navigation }) => {
   const { subscription } = route.params;
@@ -139,11 +138,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 16,
     paddingTop: 60,
-    paddingBottom: 16,
+    paddingBottom: 13,
     backgroundColor: '#FFFFFF',
   },
   backButton: {
     padding: 4,
+    marginTop: 20
   },
   headerTitle: {
     fontSize: 18,

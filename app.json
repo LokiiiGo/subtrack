@@ -19,7 +19,8 @@
         "monochromeImage": "./assets/subscription-model.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.lucaschambi01.subtrack"
     },
     "web": {
       "output": "server",
@@ -44,6 +45,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "4142e3a2-e75f-48db-90c5-bf0db054a2ae"
+      }
     }
   }
 }

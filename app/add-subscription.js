@@ -247,11 +247,13 @@ const styles = StyleSheet.create({
   },
   backButton: {
     padding: 4,
+    marginTop: 20
   },
   headerTitle: {
     fontSize: 18,
     fontWeight: '600',
     color: '#1F2937',
+    marginTop: 20
   },
   placeholder: {
     width: 32,

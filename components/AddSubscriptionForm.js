@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Modal, StyleSheet, ScrollView } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useState } from 'react';
+import { Modal, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { CATEGORIES, getSubscriptionIcon } from '../constants/icons';
 
 const AddSubscriptionForm = ({ visible, onClose, onSubmit, editingSubscription }) => {
@@ -222,7 +222,7 @@ const AddSubscriptionForm = ({ visible, onClose, onSubmit, editingSubscription }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F9FAFB',
+    backgroundColor: '#ffffffff',
   },
   header: {
     flexDirection: 'row',
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     padding: 16,
     borderBottomWidth: 1,
     borderBottomColor: '#E5E7EB',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#ffffffff',
   },
   title: {
     fontSize: 18,
