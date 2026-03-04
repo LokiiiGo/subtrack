@@ -90,7 +90,7 @@ export default function HomeScreen() {
               </View>
 
               {/* Nome */}
-              <Text style={[styles.cardTitle, { color: darkMode ? '#fff' : '#fff' }]}>
+              <Text style={[styles.cardTitle, { color: darkMode ? '#fff' : '#ffffff' }]}>
                 {item.name}
               </Text>
 

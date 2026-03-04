@@ -27,7 +27,7 @@
       "favicon": "./assets/subscription-model.png"
     },
     "plugins": [
-      "expo-router",
+      "expo-router", 
       [
         "expo-splash-screen",
         {

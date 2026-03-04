@@ -96,6 +96,6 @@ const styles = StyleSheet.create({
     marginTop: 6,
     fontSize: 14,
     fontWeight: '600',
-    color: '#000000ff',
+    color: 'rgb(94, 94, 94)',
   },
 });
