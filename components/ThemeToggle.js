@@ -24,7 +24,7 @@ export default function ThemeToggle({ onToggle }) {
   // posição horizontal do knob
   const knobTranslate = knobAnim.interpolate({
     inputRange: [0, 1],
-    outputRange: [4, 32], // desloca da esquerda (sol) para direita (lua)
+    outputRange: [4, 32],
   });
 
   // cor do knob

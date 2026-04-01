@@ -4,7 +4,7 @@
     "slug": "subtrack",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/subscription-model.png",
+    "icon": "./assets/fee.png",
     "scheme": "subtrack",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -14,9 +14,9 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/subscription-model.png",
-        "backgroundImage": "./assets/subscription-model.png",
-        "monochromeImage": "./assets/subscription-model.png"
+        "foregroundImage": "./assets/fee.png",
+        "backgroundImage": "./assets/fee.png",
+        "monochromeImage": "./assets/fee.png"
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
@@ -24,14 +24,14 @@
     },
     "web": {
       "output": "server",
-      "favicon": "./assets/subscription-model.png"
+      "favicon": "./assets/fee.png"
     },
     "plugins": [
       "expo-router", 
       [
         "expo-splash-screen",
         {
-          "image": "./assets/subscription-model.png",
+          "image": "./assets/fee.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff",
