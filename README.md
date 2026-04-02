@@ -1,7 +1,12 @@
+<div align="center">
+
 # SubTrack
+
+<img src="./assets/background-subtrack.png">
 
 **Aplicativo de gerenciamento de assinaturas digitais**
 #
+</div>
 
 **O desafio do controle financeiro digital**
 
@@ -67,11 +72,7 @@ O SubTrack oferece um conjunto abrangente de recursos projetados para cobrir tod
 
 A escolha criteriosa do stack tecnológico assegura que o SubTrack ofereça desempenho superior, manutenibilidade e experiência consistente.
 
-![React Native](https://img.shields.io/badge/React_Native-blue?style=for-the-badge&logo=react&logoColor=white)
-
-![Expo Go](https://img.shields.io/badge/Expo_Go-black?style=for-the-badge&logo=expo&logoColor=white)
-
-![Async Storage](https://img.shields.io/badge/Async_Storage-yellow?style=for-the-badge&logo=sqlite&logoColor=white)
+<img src="">
 
 # 
 
