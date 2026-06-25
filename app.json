@@ -21,7 +21,7 @@
       "package": "com.lucaschambi01.subtrack"
     },
     "web": {
-      "output": "server",
+      "output": "static",
       "favicon": "./assets/subtrack-icone.png"
     },
     "plugins": [
@@ -42,7 +42,7 @@
     ],
     "experiments": {
       "typedRoutes": true,
-      "reactCompiler": true
+      "reactCompiler": false
     },
     "extra": {
       "router": {},
