@@ -74,9 +74,8 @@ export default function HomeScreen() {
               })
             }
           >
-            <View style={[
-              styles.card,
-            ]}>
+            <View style={[styles.card,]}>
+              
               {/* Ícone dinâmico */}
               <View style={{ alignItems: 'center', marginBottom: 8 }}>
                 {getServiceIcon(item.name, 40)}
@@ -95,14 +94,14 @@ export default function HomeScreen() {
               {/* Tipo de pagamento */}
               {item.paymentMethod ? (
                 <Text style={[styles.cardSubtitle]}>
-                  💳 {item.paymentMethod}
+                  &#128179; {item.paymentMethod} {/* Adicionando o emoji através do HTML Unicode (cartão) */}
                 </Text>
               ) : null}
 
               {/* Notas */}
               {item.notes ? (
                 <Text style={[styles.cardSubtitle]}>
-                  📝 {item.notes}
+                  &#128221; {item.notes}  {/* Adicionando o emoji através do HTML Unicode (notas) */}
                 </Text>
               ) : null}
 
@@ -110,6 +109,7 @@ export default function HomeScreen() {
               <View style={styles.badge}>
                 <Text style={styles.badgeText}>{item.category}</Text>
               </View>
+
             </View>
           </TouchableOpacity>
         )}
