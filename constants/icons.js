@@ -8,10 +8,9 @@ export const ICON_DATABASE = {
   
   // Software
   'adobe': { type: 'material-community', name: 'adobe', color: '#FF0000' },
-  'microsoft': { type: 'material-community', name: 'microsoft', color: '#0078D4' },
-  'google': { type: 'material-community', name: 'google', color: '#4285F4' },
   'discord': { type: 'material-community', name: 'discord', color: '#7289DA' },
-  
+  'microsoft': { type: 'material-community', name: 'microsoft', color: '#0078D4' },
+  'google play': { type: 'material-community', name: 'google', color: '#4285F4' },
   
   // Games
   'steam': { type: 'material-community', name: 'steam', color: '#070707' },
