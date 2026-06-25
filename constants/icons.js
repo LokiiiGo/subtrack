@@ -10,11 +10,14 @@ export const ICON_DATABASE = {
   'adobe': { type: 'material-community', name: 'adobe', color: '#FF0000' },
   'microsoft': { type: 'material-community', name: 'microsoft', color: '#0078D4' },
   'google': { type: 'material-community', name: 'google', color: '#4285F4' },
+  'discord': { type: 'material-community', name: 'discord', color: '#7289DA' },
   
   
   // Games
-  'steam': { type: 'material-community', name: 'steam', color: '#000000' },
+  'steam': { type: 'material-community', name: 'steam', color: '#070707' },
   'xbox': { type: 'material-community', name: 'microsoft-xbox', color: '#107C10' },
+  'ps4' : { type: 'material-community', name: 'playstation', color: '#000482'},
+  'epic games' : { type: 'material-community', name: 'epic-games', color: '#000000' },
   
   // Default por categoria
   'default_streaming': { type: 'material', name: 'television', color: '#2563EB' },
