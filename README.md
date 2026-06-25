@@ -93,7 +93,7 @@ Pré-requisitos: **Node.js** e **npm**.
 
 ```bash
 npm install
-npm start
+npx expo start
 ```
 
 ## Contribuidores do projeto

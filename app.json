@@ -2,12 +2,11 @@
   "expo": {
     "name": "subtrack",
     "slug": "subtrack",
-    "version": "2.5.0",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/subtrack-icone.png",
     "scheme": "subtrack",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
@@ -18,7 +17,6 @@
         "backgroundImage": "./assets/subtrack-icone.png",
         "monochromeImage": "./assets/subtrack-icone.png"
       },
-      "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
       "package": "com.lucaschambi01.subtrack"
     },
@@ -27,7 +25,7 @@
       "favicon": "./assets/subtrack-icone.png"
     },
     "plugins": [
-      "expo-router", 
+      "expo-router",
       [
         "expo-splash-screen",
         {
@@ -49,7 +47,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "4142e3a2-e75f-48db-90c5-bf0db054a2ae"
+        "projectId": "f0df9c3c-d3b6-46b4-a1b7-9a138e420490"
       }
     }
   }
