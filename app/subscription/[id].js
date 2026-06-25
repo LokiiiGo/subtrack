@@ -4,24 +4,24 @@ import { getServiceIcon } from '../../utils/icons';
 import { removeSubscription } from '../../utils/storage';
 
 export default function SubscriptionDetail() {
-  const { id, name, amount, dueDay, category, paymentType, description } = useLocalSearchParams();
+  const { id, nome, mes, diaVencimento, categoria, tipoPagamento, descricao } = useLocalSearchParams();
   const router = useRouter();
 
   const handlePay = () => {
-    Alert.alert('Pagamento', `Você pagou a assinatura ${name} com sucesso!`);
+    Alert.alert('Pagamento', `Você pagou a assinatura ${nome} com sucesso!`);
   };
 
   const handleEdit = () => {
     router.push({
       pathname: '/edit-subscription',
-      params: { id, name, amount, dueDay, category, paymentType, description },
+      params: { id, nome, mes, diaVencimento, categoria, tipoPagamento, descricao },
     });
   };
 
   const handleDelete = () => {
     Alert.alert(
       'Excluir assinatura',
-      `Tem certeza que deseja excluir ${name}?`,
+      `Tem certeza que deseja excluir ${nome}?`,
       [
         { text: 'Cancelar', style: 'cancel' },
         {
@@ -38,54 +38,59 @@ export default function SubscriptionDetail() {
   const handleBack = () => {
     router.push('/');
   };
-
-  const darkMode = true;
-
+  
   return (
-    <View style={[styles.container, { backgroundColor: darkMode ? '#0F172A' : '#0f172a' }]}>
-      <View style={[styles.card, { backgroundColor: darkMode ? '#1F2937' : '#1f2937', borderColor: darkMode ? '#374151' : '#E5E7EB' }]}>
+    <View style={[styles.container]}>
+      <View style={[styles.card]}>
+
         {/* Ícone dinâmico */}
         <View style={{ alignItems: 'center', marginBottom: 12 }}>
           {getServiceIcon(name, 50)}
         </View>
 
         {/* Nome */}
-        <Text style={[styles.title]}>{name}</Text>
+        <Text style={[styles.title]}>{nome}</Text>
 
         {/* Caixinhas */}
         <View style={[styles.box, { borderColor: '#F59E0B' }]}>
           <Text style={styles.boxLabel}>Valor</Text>
-          <Text style={[styles.boxValue]}>R$ {parseFloat(amount).toFixed(2)}</Text>
+          <Text style={[styles.boxValue]}>R$ {parseFloat(mes).toFixed(2)}</Text>
         </View>
 
         <View style={[styles.box, { borderColor: '#3B82F6' }]}>
           <Text style={styles.boxLabel}>Dia de cobrança</Text>
-          <Text style={[styles.boxValue]}>{dueDay}</Text>
+          <Text style={[styles.boxValue]}>{diaVencimento}</Text>
         </View>
 
         <View style={[styles.box, { borderColor: '#10B981' }]}>
           <Text style={styles.boxLabel}>Tipo de pagamento</Text>
-          <Text style={[styles.boxValue]}>{paymentType || 'Não informado'}</Text>
+          <Text style={[styles.boxValue]}>{tipoPagamento || 'Não informado'}</Text>
         </View>
 
         <View style={[styles.box, { borderColor: '#8B5CF6' }]}>
           <Text style={styles.boxLabel}>Descrição</Text>
-          <Text style={[styles.boxValue]}>{description || 'Sem descrição'}</Text>
+          <Text style={[styles.boxValue]}>{descricao || 'Sem descrição'}</Text>
         </View>
 
         {/* Badge */}
         <View style={styles.badge}>
-          <Text style={styles.badgeText}>{category}</Text>
+          <Text style={styles.badgeText}>{categoria}</Text>
         </View>
 
         {/* Botões */}
         <View style={styles.actions}>
+
+          {/* Fazer pagamento */}
           <TouchableOpacity style={styles.payButton} onPress={handlePay}>
             <Text style={styles.buttonText}>Pagar</Text>
           </TouchableOpacity>
+
+          {/* Editar pagamento */}
           <TouchableOpacity style={styles.editButton} onPress={handleEdit}>
             <Text style={styles.buttonText}>Editar</Text>
           </TouchableOpacity>
+
+          {/* Deletar pagamento */}
           <TouchableOpacity style={styles.deleteButton} onPress={handleDelete}>
             <Text style={styles.buttonText}>Excluir</Text>
           </TouchableOpacity>
@@ -95,13 +100,18 @@ export default function SubscriptionDetail() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Text style={styles.buttonText}>Voltar ao início</Text>
         </TouchableOpacity>
+
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20 },
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#0F172A',
+  },
   card: {
     borderRadius: 16,
     padding: 20,
@@ -110,6 +120,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 6,
     elevation: 4,
+    backgroundColor: '#1F2937',
+    borderColor: '#e2e2e2',
   },
   title: {
     fontSize: 24,
@@ -145,7 +157,11 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderRadius: 10,
   },
-  badgeText: { color: '#fff', fontSize: 14, fontWeight: '600' },
+  badgeText: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: '600'
+  },
   actions: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -177,5 +193,9 @@ const styles = StyleSheet.create({
     marginTop: 16,
     alignSelf: 'center',
   },
-  buttonText: { color: '#fff', fontSize: 16, fontWeight: '600' },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600'
+  },
 });

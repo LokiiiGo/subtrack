@@ -2,7 +2,7 @@
   "expo": {
     "name": "subtrack",
     "slug": "subtrack",
-    "version": "1.0.0",
+    "version": "2.5.0",
     "orientation": "portrait",
     "icon": "./assets/subtrack-icone.png",
     "scheme": "subtrack",
