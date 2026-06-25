@@ -211,20 +211,22 @@ export default function AddSubscription() {
           </View>
         )}
 
-        {/* Notas */}
+        {/* Notas (observações) */}
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Notas</Text>
           <TextInput style={[styles.input, styles.textArea]} placeholder="Observações, detalhes do plano..." value={notes} onChangeText={setNotes} multiline />
         </View>
 
-        {/* Botões */}
+        {/* Botão de salvar o pagamento */}
         <TouchableOpacity style={[styles.saveButton, loading && styles.saveButtonDisabled]} onPress={handleSave} disabled={loading}>
           {loading ? <Text style={styles.saveButtonText}>Salvando...</Text> : <Text style={styles.saveButtonText}>{isEdit ? 'Salvar Alterações' : 'Criar Assinatura'}</Text>}
         </TouchableOpacity>
 
+        {/* Botão de retornar caso o usuário não adicione mais um pagamento*/}
         <TouchableOpacity style={styles.cancelButton} onPress={() => router.back()}>
           <Text style={styles.cancelButtonText}>Cancelar</Text>
         </TouchableOpacity>
+
       </ScrollView>
     </KeyboardAvoidingView>
   );
