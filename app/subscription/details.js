@@ -143,7 +143,7 @@ export default function SubscriptionDetails() {
 
   return (
     <View style={styles.container}>
-      {/* Header */}
+      {/* Cabeçalho */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.push('/')} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
@@ -188,15 +188,22 @@ export default function SubscriptionDetails() {
 
         {/* Botões */}
         <View style={styles.actions}>
+
+          {/* Fazer pagamento */}
           <TouchableOpacity style={styles.paymentButton} onPress={handlePayment}>
             <Text style={styles.buttonText}>Ir para Pagamento</Text>
           </TouchableOpacity>
+
+          {/* Editar pagamento */}
           <TouchableOpacity style={styles.editButton} onPress={handleEdit}>
             <Text style={styles.buttonText}>Editar</Text>
           </TouchableOpacity>
+
+          {/* Deletar pagamento*/}
           <TouchableOpacity style={styles.deleteButton} onPress={handleDelete}>
             <Text style={styles.buttonText}>Excluir</Text>
           </TouchableOpacity>
+
         </View>
       </ScrollView>
     </View>
