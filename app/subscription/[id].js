@@ -24,7 +24,8 @@ export default function SubscriptionDetail() {
       `Tem certeza que deseja excluir ${name}?`,
       [
         { text: 'Cancelar', style: 'cancel' },
-        { text: 'Excluir', style: 'destructive',
+        {
+          text: 'Excluir', style: 'destructive',
           onPress: async () => {
             await removeSubscription(id);
             router.push('/');
@@ -49,27 +50,27 @@ export default function SubscriptionDetail() {
         </View>
 
         {/* Nome */}
-        <Text style={[styles.title, { color: darkMode ? '#F3F4F6' : '#111827' }]}>{name}</Text>
+        <Text style={[styles.title]}>{name}</Text>
 
         {/* Caixinhas */}
         <View style={[styles.box, { borderColor: '#F59E0B' }]}>
           <Text style={styles.boxLabel}>Valor</Text>
-          <Text style={[styles.boxValue, { color: darkMode ? '#F3F4F6' : '#111827' }]}>R$ {parseFloat(amount).toFixed(2)}</Text>
+          <Text style={[styles.boxValue]}>R$ {parseFloat(amount).toFixed(2)}</Text>
         </View>
 
         <View style={[styles.box, { borderColor: '#3B82F6' }]}>
           <Text style={styles.boxLabel}>Dia de cobrança</Text>
-          <Text style={[styles.boxValue, { color: darkMode ? '#F3F4F6' : '#111827' }]}>{dueDay}</Text>
+          <Text style={[styles.boxValue]}>{dueDay}</Text>
         </View>
 
         <View style={[styles.box, { borderColor: '#10B981' }]}>
           <Text style={styles.boxLabel}>Tipo de pagamento</Text>
-          <Text style={[styles.boxValue, { color: darkMode ? '#F3F4F6' : '#111827' }]}>{paymentType || 'Não informado'}</Text>
+          <Text style={[styles.boxValue]}>{paymentType || 'Não informado'}</Text>
         </View>
 
         <View style={[styles.box, { borderColor: '#8B5CF6' }]}>
           <Text style={styles.boxLabel}>Descrição</Text>
-          <Text style={[styles.boxValue, { color: darkMode ? '#F3F4F6' : '#111827' }]}>{description || 'Sem descrição'}</Text>
+          <Text style={[styles.boxValue]}>{description || 'Sem descrição'}</Text>
         </View>
 
         {/* Badge */}
@@ -115,6 +116,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 16,
     textAlign: 'center',
+    color: '#fff',
   },
   box: {
     borderWidth: 2,
@@ -124,7 +126,7 @@ const styles = StyleSheet.create({
   },
   boxLabel: {
     fontSize: 12,
-    color: '#9CA3AF',
+    color: '#ffffff',
     marginBottom: 4,
     fontWeight: '600',
     textTransform: 'uppercase',
@@ -133,6 +135,7 @@ const styles = StyleSheet.create({
   boxValue: {
     fontSize: 16,
     fontWeight: '600',
+    color: '#111827',
   },
   badge: {
     marginTop: 8,

@@ -136,7 +136,7 @@ export default function AddSubscription() {
     <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#2563EB" />
+          <Ionicons name="arrow-back" size={24} color="#2d5cc3" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{isEdit ? 'Editar Assinatura' : 'Nova Assinatura'}</Text>
         <View style={styles.placeholder} />
@@ -225,7 +225,7 @@ export default function AddSubscription() {
         <TouchableOpacity style={styles.cancelButton} onPress={() => router.back()}>
           <Text style={styles.cancelButtonText}>Cancelar</Text>
         </TouchableOpacity>
-            </ScrollView>
+      </ScrollView>
     </KeyboardAvoidingView>
   );
 }
@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
   },
   currencySymbol: {
     fontSize: 16,
-    color: '#6B7280',
+    color: '#000000',
     marginRight: 4,
   },
   amountInput: {

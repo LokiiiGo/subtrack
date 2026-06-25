@@ -11,6 +11,7 @@ export const ICON_DATABASE = {
   'microsoft': { type: 'material-community', name: 'microsoft', color: '#0078D4' },
   'google': { type: 'material-community', name: 'google', color: '#4285F4' },
   
+  
   // Games
   'steam': { type: 'material-community', name: 'steam', color: '#000000' },
   'xbox': { type: 'material-community', name: 'microsoft-xbox', color: '#107C10' },

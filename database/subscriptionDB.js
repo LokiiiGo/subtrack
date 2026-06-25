@@ -22,11 +22,11 @@ export const initDatabase = () => {
         );`,
         [],
         () => {
-          console.log('✅ Database criado com sucesso!');
+          console.log('Database criado com sucesso!');
           resolve();
         },
         (_, error) => {
-          console.log('❌ Erro ao criar banco:', error);
+          console.log('Erro ao criar banco:', error);
           reject(error);
         }
       );
@@ -56,11 +56,11 @@ export const addSubscription = (subscription) => {
           subscription.updatedAt
         ],
         (_, result) => {
-          console.log('✅ Assinatura salva:', subscription.name);
+          console.log('Assinatura salva:', subscription.name);
           resolve(result);
         },
         (_, error) => {
-          console.log('❌ Erro ao salvar:', error);
+          console.log('Erro ao salvar:', error);
           reject(error);
         }
       );
@@ -75,7 +75,7 @@ export const getSubscriptions = () => {
         'SELECT * FROM subscriptions ORDER BY due_day ASC',
         [],
         (_, { rows }) => {
-          console.log(`📊 Assinaturas encontradas: ${rows._array.length}`);
+          console.log(`Assinaturas encontradas: ${rows._array.length}`);
           resolve(rows._array);
         },
         (_, error) => reject(error)

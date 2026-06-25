@@ -157,7 +157,7 @@ export default function SubscriptionDetails() {
       <ScrollView style={styles.content}>
         {/* Nome e Status */}
         <View style={styles.iconSection}>
-          <Ionicons name="tv-outline" size={40} color="#2563EB" />
+          <Ionicons name="tv-outline" size={40} color="#3a78ff" />
           <Text style={styles.name}>{subscription.name}</Text>
           <Text style={styles.status}>{subscription.status || 'Ativa'}</Text>
         </View>
@@ -204,7 +204,10 @@ export default function SubscriptionDetails() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#0F172A' },
+  container: {
+    flex: 1,
+    backgroundColor: '#0F172A'
+  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -212,34 +215,65 @@ const styles = StyleSheet.create({
     backgroundColor: '#1F2937',
     alignItems: 'center'
   },
-  headerTitle: { 
-    fontSize: 18, 
-    fontWeight: '600', 
+  headerTitle: {
+    fontSize: 18,
+    fontWeight: '600',
     color: '#fff',
     marginTop: 20
   },
 
-  headerEdit: { 
+  headerEdit: {
     padding: 4,
     marginTop: 20
   },
 
-  backButton: { padding: 4, marginTop: 20 },
-  content: { padding: 16 },
-  iconSection: { alignItems: 'center', marginBottom: 20 },
-  name: { fontSize: 24, fontWeight: 'bold', color: '#fff', marginTop: 8 },
-  status: { fontSize: 14, color: '#9CA3AF', marginTop: 4 },
-  
+  backButton: {
+    padding: 4,
+    marginTop: 20
+  },
+  content: {
+    padding: 16
+  },
+  iconSection: {
+    alignItems: 'center',
+    marginBottom: 20
+  },
+  name: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#fff',
+    marginTop: 8
+  },
+  status: {
+    fontSize: 14,
+    color: '#9CA3AF',
+    marginTop: 4
+  },
+
   card: {
     backgroundColor: '#1F2937',
     padding: 16,
     borderRadius: 12,
     marginBottom: 12
   },
-  cardLabel: { fontSize: 14, fontWeight: '600', color: '#9CA3AF' },
-  amount: { fontSize: 22, fontWeight: 'bold', color: '#fff' },
-  infoValue: { fontSize: 16, color: '#F3F4F6', marginBottom: 8 },
-  actions: { marginTop: 20 },
+  cardLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#9CA3AF'
+  },
+  amount: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#fff'
+  },
+  infoValue: {
+    fontSize: 16,
+    color: '#F3F4F6',
+    marginBottom: 8
+  },
+  actions: {
+    marginTop: 20
+  },
   paymentButton: {
     backgroundColor: '#2563EB',
     padding: 14,
@@ -260,14 +294,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center'
   },
-  buttonText: { 
-    color: '#fff', 
-    fontSize: 16, 
-    fontWeight: '600' 
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600'
   },
-  backButtonText: { 
-    color: '#fff', 
-    fontSize: 16 
+  backButtonText: {
+    color: '#fff',
+    fontSize: 16
   }
 });
 

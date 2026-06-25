@@ -9,13 +9,11 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import ThemeToggle from '../components/ThemeToggle';
 import { getDaysUntilDue } from '../utils/dateUtils';
 import { getServiceIcon } from '../utils/icons';
 import { getSubscriptions } from '../utils/storage';
 
 export default function HomeScreen() {
-  const [darkMode, setDarkMode] = useState(false);
   const [subscriptions, setSubscriptions] = useState([]);
   const [refreshing, setRefreshing] = useState(false);
   const router = useRouter();
@@ -32,19 +30,15 @@ export default function HomeScreen() {
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: darkMode ? '#1f2937' : '#ffffffff' }}>
-      {/* Botão de tema */}
-      <View style={{ alignItems: 'flex-end', padding: 16, marginTop: 40 }}>
-        <ThemeToggle onToggle={setDarkMode} />
-      </View>
+    <View style={{ flex: 1, backgroundColor: '#111827' }}>
 
       {/* Título */}
-      <Text style={[styles.title, { color: darkMode ? '#fff' : '#000' }]}>
+      <Text style={[styles.title]}>
         Subtrack
       </Text>
 
       {/* Total mensal */}
-      <Text style={[styles.subtitle, { color: darkMode ? '#fff' : '#000' }]}>
+      <Text style={[styles.subtitle]}>
         Total mensal: R$ {subscriptions.reduce((acc, s) => acc + s.amount, 0).toFixed(2)}
       </Text>
 
@@ -73,7 +67,7 @@ export default function HomeScreen() {
                   dueDay: item.dueDay,
                   category: item.category,
                   paymentMethod: item.paymentMethod,
-                  notes: item.notes,                
+                  notes: item.notes,
                   status: item.status,
                   periodicity: item.periodicity,
                 },
@@ -82,7 +76,6 @@ export default function HomeScreen() {
           >
             <View style={[
               styles.card,
-              { backgroundColor: darkMode ? '#1F2937' : '#1f2937' }
             ]}>
               {/* Ícone dinâmico */}
               <View style={{ alignItems: 'center', marginBottom: 8 }}>
@@ -90,25 +83,25 @@ export default function HomeScreen() {
               </View>
 
               {/* Nome */}
-              <Text style={[styles.cardTitle, { color: darkMode ? '#fff' : '#ffffff' }]}>
+              <Text style={[styles.cardTitle]}>
                 {item.name}
               </Text>
 
               {/* Valor + vencimento */}
-              <Text style={[styles.cardSubtitle, { color: darkMode ? '#9CA3AF' : '#9ca3af' }]}>
+              <Text style={[styles.cardSubtitle]}>
                 R$ {item.amount.toFixed(2)} — vence em {getDaysUntilDue(item.dueDay)} dias
               </Text>
 
               {/* Tipo de pagamento */}
               {item.paymentMethod ? (
-                <Text style={[styles.cardSubtitle, { color: darkMode ? '#9CA3AF' : '#9ca3af' }]}>
+                <Text style={[styles.cardSubtitle]}>
                   💳 {item.paymentMethod}
                 </Text>
               ) : null}
 
               {/* Notas */}
               {item.notes ? (
-                <Text style={[styles.cardSubtitle, { color: darkMode ? '#9CA3AF' : '#9ca3af' }]}>
+                <Text style={[styles.cardSubtitle]}>
                   📝 {item.notes}
                 </Text>
               ) : null}
@@ -131,11 +124,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginHorizontal: 16,
     marginTop: 8,
+    color: '#ffffff',
   },
   subtitle: {
     marginLeft: 16,
     marginBottom: 8,
     fontSize: 16,
+    color: '#ffffff',
   },
   addButton: {
     backgroundColor: '#2563EB',
@@ -162,15 +157,18 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 2,
+    backgroundColor: '#141d31',
   },
   cardTitle: {
     fontSize: 16,
     fontWeight: '600',
     marginBottom: 4,
+    color: '#ffffff',
   },
   cardSubtitle: {
     fontSize: 14,
     marginBottom: 6,
+    color: '#6B7280',
   },
   badge: {
     alignSelf: 'flex-start',
