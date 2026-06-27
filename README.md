@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center"> 
 
 # SubTrack
 
@@ -103,7 +103,7 @@ npx expo start
   <tr>
     <td align="center">
       <a href="#" title="defina o título do link">
-        <img src="https://avatars.githubusercontent.com/u/217499816?v=4" width="100px;" alt="Airton Ronaldo Mamani"/><br>
+        <img src="https://avatars.githubusercontent.com/u/217499816?v=4" width="100px;" alt="Perfil de Airton Ronaldo Jimenez Mamani"/><br>
         <sub>
           <b>Airton Mamani</b>
         </sub>
@@ -111,7 +111,7 @@ npx expo start
     </td>
     <td align="center">
       <a href="#" title="defina o título do link">
-        <img src="https://avatars.githubusercontent.com/u/216255686?v=4" width="100px;" alt="foto de perfil do Lucas Bruno Calle Chambi"/><br>
+        <img src="https://avatars.githubusercontent.com/u/216255686?v=4" width="100px;" alt="Perfil de Lucas Bruno Calle Chambi"/><br>
         <sub>
           <b>Lucas Chambi</b>
         </sub>
