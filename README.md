@@ -102,7 +102,7 @@ npx expo start
 <table>
   <tr>
     <td align="center">
-      <a href="#" title="defina o título do link">
+      <a href="#" title="Airton Mamani">
         <img src="https://avatars.githubusercontent.com/u/217499816?v=4" width="100px;" alt="Perfil de Airton Ronaldo Jimenez Mamani"/><br>
         <sub>
           <b>Airton Mamani</b>
@@ -110,7 +110,7 @@ npx expo start
       </a>
     </td>
     <td align="center">
-      <a href="#" title="defina o título do link">
+      <a href="#" title="Lucas Chambi">
         <img src="https://avatars.githubusercontent.com/u/216255686?v=4" width="100px;" alt="Perfil de Lucas Bruno Calle Chambi"/><br>
         <sub>
           <b>Lucas Chambi</b>
