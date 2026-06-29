@@ -235,7 +235,7 @@ export default function AddSubscription() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#111827',
+    backgroundColor: '#10192f',
   },
   header: {
     flexDirection: 'row',

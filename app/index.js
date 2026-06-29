@@ -30,7 +30,7 @@ export default function HomeScreen() {
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#111827' }}>
+    <View style={{ flex: 1, backgroundColor: '#0a101d' }}>
 
       {/* Título */}
       <Text style={[styles.title]}>
@@ -152,12 +152,12 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#dedede',
     shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 2,
-    backgroundColor: '#141d31',
+    backgroundColor: '#10192f',
   },
   cardTitle: {
     fontSize: 16,
